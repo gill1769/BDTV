@@ -30,5 +30,13 @@ class Movie(models.Model):
         cls.movieData = {}
         cls.movieData['Title'] = data['Title']
         cls.movieData['Actors'] = data['Actors'].split(' , ')
+        cls.movieData['Language'] = data['Language'].split(' , ')
+       # cls.movieData['Rated'] = data['Rated']
+        cls.movieData['Released'] = data['Released']
+        cls.movieData['Plot'] = data['Plot']
+        cls.movieData['Writer'] = data['Writer'].split(' , ')
+        cls.movieData['Director'] = data['Director']
+        cls.movieData['Runtime'] = data['Runtime']
+        cls.movieData['Poster'] = data['Poster']
         return cls.movieData
 
