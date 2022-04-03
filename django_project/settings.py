@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'movie.apps.BlogConfig',
     'users.apps.UsersConfig',
+    'cart.apps.CartConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
