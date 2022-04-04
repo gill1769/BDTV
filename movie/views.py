@@ -49,6 +49,7 @@ def movie_detail(request,movie_id):
         'title':data['original_title'],
         'des':data['overview'],
         'rating': data['vote_average'],
-        'release_date': data['release_date']
+        'release_date': data['release_date'],
+        'img': data['poster_path']
     }
     return render(request,'movie/movie_details.html',{'context':context})

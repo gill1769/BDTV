@@ -1,11 +1,36 @@
 {% extends "movie/base.html" %}
 {% block content %}
- <div class="row">
 
-    <p>{{ context.title }}</p>
-     <p>{{ context.des }}</p>
-    <p>{{ context.rating }}</p>
-  <p>{{ context.release_date }}</p>
+    <div class="col-sm-10 col-md-10 col-xs-6">
+
+              <div class="thumbnail" style="border:none; background:white;">
+
+              <div class="col-sm-4 col-md-10 col-xs-4 image-container">
+                <img src="https://image.tmdb.org/t/p/original/{{context.img}}" style="height:500px; margin-left:-15px;" />
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-xs-12">
+
+                <h2>{{ context.title }}</h2>
+     <p>{{ context.des }}</p><br/>
+    <p><strong>Rating: </strong>{{ context.rating }}</p><hr/>
+    <p><strong> Release Date: </strong>{{ context.release_date }}<hr/>
+              </div>
+              </div>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+	<div class="row" style="border:none; background:white; height:210px;">
+		<div class="col-xs-6">
+			<img src="images/online_learning.jpg" style="height:200px; margin-left:-15px;" />
+		</div>
+		<div class="col-xs-6">
+			<h3>Hello World</h3>
+			<p style="font-size:10px; color:#03225C;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit adipiscing blandit. Aliquam placerat, velit a fermentum fermentum, mi felis vehicula justo, a dapibus quam augue non massa.</p>
+		</div>
+	</div>
 
  </div>
 
