@@ -19,8 +19,8 @@
 
     <div class="col" style="display: flex; flex-direction: column">
     <div>
-      <a href="" style="text-decoration: none; color: black;">
-        <div class="card" style="width: 20rem; margin-bottom: 20px;">
+      <a href="{% url "movie_details" movie.id %}" style="text-decoration: none; color: black;">
+          <div class="card" style="width: 20rem; margin-bottom: 20px;">
           <img src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ movie.original_title }}</h5>
