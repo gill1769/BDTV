@@ -2,21 +2,69 @@
 {% block content %}
 
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
 
 
-	<div class="row" style="border:none; background:white; height:210px;">
-		<div class="col-xs-6">
+    <div class="container bg-light">
+	<div class="row">
+		<div class="col-sm-6">
 			<img src="https://image.tmdb.org/t/p/original/{{context.img}}" style="height:500px; margin-left:-15px;" />
 		</div>
-        <div class="col-xs-5">
+        <div class="col-sm-5">
             <h2>{{ context.title }}</h2>
          <p>{{ context.des }}</p><br/>
     <p><strong>Rating: </strong>{{ context.rating }}</p><hr/>
     <p><strong> Release Date: </strong>{{ context.release_date }}<hr/>
+            {% if user.is_authenticated %}
+    <button style="width:112px;margin:10px" type="button" class="btn btn-primary p-2 rounded-0" data-toggle="modal" data-target="#buyModal">BUY <br> $3.99 </button>
+    <button style="width:112px;margin:10px" type="button" class="btn btn-primary p-2 rounded-0" data-toggle="modal" data-target="#rentModal">RENT <br> $2.99 </button>
+        {% endif %}
         </div>
 
-	</div>
+    </div>
 
+    <div id="buyModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+          <p>Do you want to buy {{ context.title }} for <strong>$3.99</strong> </p>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-default" href="{% url "payment"%}"> BUY </a>
+        <a type="button" class="btn btn-default" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+     <div id="rentModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+          <p>Do you want to rent {{ context.title }} for <strong>$2.99</strong> </p>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-default" href="{% url "payment"%}"> Rent </a>
+        <a type="button" class="btn btn-default" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
 
 {% endblock content %}

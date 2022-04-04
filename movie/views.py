@@ -53,3 +53,6 @@ def movie_detail(request,movie_id):
         'img': data['poster_path']
     }
     return render(request,'movie/movie_details.html',{'context':context})
+
+def payment(request):
+    return render(request,'movie/paypal.html')
