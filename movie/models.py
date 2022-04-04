@@ -4,7 +4,6 @@ import requests
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-from rest_framework import parsers
 
 
 class Movie(models.Model):

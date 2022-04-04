@@ -7,7 +7,11 @@ from users.forms import AboutRegsiter
 from movie.forms import SearchForm
 
 def home(request):
-    return render(request, 'movie/home.html')
+    url = "https://api.themoviedb.org/3/movie/popular?api_key=e4b3e22ec2b42c496bb2127725b996ad&language=en-US&page=1"
+    response = requests.request("GET", url)
+    data = json.loads(response.text)
+
+    return render(request, 'movie/home.html',{'data':data})
 
 
 def about(request):
