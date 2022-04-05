@@ -50,9 +50,13 @@ def movie_detail(request,movie_id):
         'des':data['overview'],
         'rating': data['vote_average'],
         'release_date': data['release_date'],
-        'img': data['poster_path']
+        'img': data['poster_path'],
+        'genre':  data['genres'][0]['name'],
     }
     return render(request,'movie/movie_details.html',{'context':context})
 
 def payment(request):
     return render(request,'movie/paypal.html')
+
+def trailers(request):
+    return render(request,'movie/trailers.html')

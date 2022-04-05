@@ -65,11 +65,11 @@
             <h3>Catch Up</h3>
             <p class='text-muted'>
               <ul class="list-group">
-                <a href="{%   url 'new' %}"><li class="list-group-item list-group-item-light"> Latest Movies</li></a>
-                <li class="list-group-item list-group-item-light">Trailers</li>
+                <a  href="{% url "cartdetails" %}" ><li class=" text-decoration-none list-group-item list-group-item-light"> Request Movies</li></a>
+              <a  href="{% url "trailers" %}"><li class="list-group-item list-group-item-light">Trailers</li></a>
                 <li class="list-group-item list-group-item-light">Reviews</li>
                 <li class="list-group-item list-group-item-light">Shows</li>
-                <a  href="{% url 'search' %}"><li class="list-group-item list-group-item-light">Search Movies</li></a>
+                <a  class="text-decoration-none" href="{% url 'search' %}"><li class="list-group-item list-group-item-light">Search Movies</li></a>
               </ul>
             </p>
           </div>

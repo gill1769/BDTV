@@ -1,10 +1,56 @@
 {% extends "movie/base.html" %}
 {% block content %}
 
-    <h1>About Page</h1>
-    {{ movies.Title }}
-    {{ movies.Actors }}
-    {{ movies.Poster }}
-    {{ movies.Director }}
-    {{ form }}
-{% endblock content %}
+    <header class="bg-steel text-center py-5 mb-4">
+  <div class="container">
+    <h1 class="fw-light text-white">Meet the Team</h1>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <!-- Team Member 1 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://drive.google.com/uc?export=view&id=1RM2j0lXC-4kxonQrtScJKB7nOmunF5yG" height = 200px width= 250px  class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Team Member</h5>
+          <div class="card-text text-black-50">Sai Krishna</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://drive.google.com/uc?export=view&id=1oSFnuY91V4hdXfyo8qtb8VJj0b8j6U_B" height = 200px width= 250px  alt="Mountain" class="card-img-top" >
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Team Member</h5>
+          <div class="card-text text-black-50">Akhilesh Sharda</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 3 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://drive.google.com/uc?export=view&id=1bcdwhDKUk8-VdUZMjuDRlnHkttCy0VDb" height = 200px width= 250px  class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Team Member</h5>
+          <div class="card-text text-black-50">Harjinder Gill</div>
+        </div>
+      </div>
+    </div>
+    <!-- Team Member 4 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+        <img src="https://drive.google.com/uc?export=view&id=15eBs5GkHQ19nhl8AOBQfa1JMy1WMJK4q" height = 200px width= 250px class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">Team Member</h5>
+          <div class="card-text text-black-50">Sandeep Varma</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+
+</div>{% endblock content %}

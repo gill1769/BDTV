@@ -14,6 +14,9 @@
          <p>{{ context.des }}</p><br/>
     <p><strong>Rating: </strong>{{ context.rating }}</p><hr/>
     <p><strong> Release Date: </strong>{{ context.release_date }}<hr/>
+
+        <p><strong> Genre: </strong>{{ context.genre }}<hr/>
+
             {% if user.is_authenticated %}
     <button style="width:112px;margin:10px" type="button" class="btn btn-primary p-2 rounded-0" data-toggle="modal" data-target="#buyModal">BUY <br> $3.99 </button>
     <button style="width:112px;margin:10px" type="button" class="btn btn-primary p-2 rounded-0" data-toggle="modal" data-target="#rentModal">RENT <br> $2.99 </button>
