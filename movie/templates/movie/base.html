@@ -13,9 +13,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'movie/main.css' %}">
 
     {% if title %}
-        <title>BDTV - {{ title }}</title>
+        <title>POGTV - {{ title }}</title>
     {% else %}
-        <title>BDTV</title>
+        <title>POGTV</title>
     {% endif %}
 </head>
 <body>
@@ -67,7 +67,7 @@
               <ul class="list-group">
                 <a  href="{% url "cartdetails" %}" ><li class=" text-decoration-none list-group-item list-group-item-light"> Request Movies</li></a>
               <a  href="{% url "trailers" %}"><li class="list-group-item list-group-item-light">Trailers</li></a>
-                <li class="list-group-item list-group-item-light">Reviews</li>
+              <a  href="{% url "top10" %}" > <li class="list-group-item list-group-item-light">Top 10</li></a>
                 <li class="list-group-item list-group-item-light">Shows</li>
                 <a  class="text-decoration-none" href="{% url 'search' %}"><li class="list-group-item list-group-item-light">Search Movies</li></a>
               </ul>

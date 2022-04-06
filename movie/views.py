@@ -55,6 +55,13 @@ def movie_detail(request,movie_id):
     }
     return render(request,'movie/movie_details.html',{'context':context})
 
+
+def top10(request):
+    url = "https://api.themoviedb.org/3/movie/top_rated?api_key=e4b3e22ec2b42c496bb2127725b996ad&language=en-US&page=1"
+    response = requests.request("GET", url)
+    data = json.loads(response.text)
+    return render(request,'movie/top10.html',{'data':data})
+
 def payment(request):
     return render(request,'movie/paypal.html')
 
